@@ -74,8 +74,8 @@ shell="$SHELL"
 ## Terminal
 terminal="$TERM"
 
-## Number of packages installed via Homebrew
-packages="`brew list -l | wc -l | awk '{print $1 }'`"
+## Number of packages installed via pkgsrc
+packages="`pkg_info | wc -l | awk '{print $1 }'`"
 
 ## CPU Type
 cpu=$(sysctl -n machdep.cpu.brand_string)
